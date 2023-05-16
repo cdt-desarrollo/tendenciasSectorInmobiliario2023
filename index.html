@@ -16,7 +16,7 @@
   <title>Encuesta Sector Inmobiliario</title>
 </head>
 <body>
-  <nav class="navbar navbar-light bg-light sticky-top">
+  <nav class="navbar navbar-light bg-light sticky-top" style="display: flex; justify-content: center;">
     <a class="navbar-brand" href="https://www.facebook.com/CEMDI.METROPOLITANO" target="_blank">
       <img src="assets/faviconCEMDI.png" width="30" height="30" class="d-inline-block align-top" alt="">
       CEMDI
@@ -24,17 +24,19 @@
   </nav>
   <div class="container-fluid d-grid gap-2 p-3" id="deleteDiv">
     <div id="welcomeInformation">
-      <h1 class="text-left">Centro Metropolitano de Información Económica y Empresarial - Encuesta Sector Inmobiliario 2022</h1>
+      <h1 class="text-left">Centro Metropolitano de Información Económica y Empresarial - Encuesta Sector Inmobiliario 2023</h1>
       <h4 class="text-justify">Agradecemos de su apoyo en contestar la siguiente encuesta, sus respuestas nos ayudarán para conocer la situación en el sector inmobiliario y posteriormente generar un registro histórico.
+      </h4>
+      <h4 class="text-justify">Indique la respuesta del mes que corresponda en cada una de las casillas, se presenta de Enero a Abril de 2023.
       </h4>
       <h4 class="text-danger">Todos los datos que proporcione son confidenciales y se utilizarán únicamente con fines estadísticos.</h4>
     </div>
-    <div id="tableMonths">
+    <!-- <div id="tableMonths">
       <table style="width: 100%;" class="table table-striped table-bordered text-center">
         <tr id="monthsThText">
         </tr>
       </table>
-    </div>
+    </div> -->
     <div id="personalInformation">
       <h5 class="fst-italic">*Obligatorio</h5>
       <div class="input-group mb-2">
@@ -85,7 +87,7 @@
         </div>
       </div>
       <div class="q2">
-        <h5>2.- <strong>Durante el 2022</strong>, ¿cuántas unidades de <strong>condominios</strong> vendiste?</h5>
+        <h5>2.- <strong>Durante el mes</strong>, ¿cuántas unidades de <strong>condominios</strong> vendiste?</h5>
         <table class="table table-striped table-bordered">
           <tbody>
             <tr>
@@ -287,7 +289,7 @@
         </table>
       </div>
       <div class="q3">
-        <h5>3.- <strong>Durante el 2022</strong>, ¿cuántas unidades de <strong>casas</strong> vendiste?</h5>
+        <h5>3.- <strong>Durante el mes</strong>, ¿cuántas unidades de <strong>casas</strong> vendiste?</h5>
         <table class="table table-striped table-bordered">
           <tbody>
             <tr>
@@ -489,7 +491,7 @@
         </table>
       </div>
       <div class="q4">
-        <h5>4.- <strong>Durante el 2022</strong>, ¿cuántas unidades de <strong>lotes</strong> vendiste?</h5>
+        <h5>4.- <strong>Durante el mes</strong>, ¿cuántas unidades de <strong>lotes</strong> vendiste?</h5>
         <table class="table table-striped table-bordered">
           <tbody>
             <tr>
@@ -863,7 +865,7 @@
         </table>
       </div>
       <div class="q6">
-        <h5>6.- ¿Cuál es el promedio de <u>precio total de venta</u> de los <strong>casas</strong> en tu inventario?</h5>
+        <h5>6.- ¿Cuál es el promedio de <u>precio total de venta</u> de las <strong>casas</strong> en tu inventario?</h5>
         <table class="table table-striped table-bordered">
           <tbody>
             <tr>
@@ -1581,7 +1583,7 @@
         </table>
       </div>
       <div class="q10">
-        <h5>10.- La forma de pago que más se presentó durante <strong>2022</strong> fue...</h5>
+        <h5>10.- La forma de pago que más se presentó durante el <strong>mes</strong> fue...</h5>
         <table class="table table-striped table-bordered">
           <tbody>
             <tr>
@@ -1644,11 +1646,26 @@
               <td id="nov"><input type="radio" name="novq10" value="financiamientodirectoporelvendedornovq10"></td>
               <td id="dic"><input type="radio" name="dicq10" value="financiamientodirectoporelvendedordicq10"></td>
             </tr>
+            <tr>
+              <th>No tuve ventas</th>
+              <td id="ene"><input type="radio" name="eneq10" value="notuveventaseneq10"></td>
+              <td id="feb"><input type="radio" name="febq10" value="notuveventasfebq10"></td>
+              <td id="mar"><input type="radio" name="marq10" value="notuveventasmarq10"></td>
+              <td id="abr"><input type="radio" name="abrq10" value="notuveventasabrq10"></td>
+              <td id="may"><input type="radio" name="mayq10" value="notuveventasmayq10"></td>
+              <td id="jun"><input type="radio" name="junq10" value="notuveventasjunq10"></td>
+              <td id="jul"><input type="radio" name="julq10" value="notuveventasjulq10"></td>
+              <td id="ago"><input type="radio" name="agoq10" value="notuveventasagoq10"></td>
+              <td id="sep"><input type="radio" name="sepq10" value="notuveventassepq10"></td>
+              <td id="oct"><input type="radio" name="octq10" value="notuveventasoctq10"></td>
+              <td id="nov"><input type="radio" name="novq10" value="notuveventasnovq10"></td>
+              <td id="dic"><input type="radio" name="dicq10" value="notuveventasdicq10"></td>
+            </tr>
           </tbody>
         </table>
       </div>
       <div class="q11">
-        <h5>11.- En su mayoría, <strong>durante el 2022</strong> la edad promedio de tus clientes fue...</h5>
+        <h5>11.- En su mayoría, durante el <strong>mes</strong> la edad promedio de tus clientes fue...</h5>
         <table class="table table-striped table-bordered">
           <tbody>
             <tr>
@@ -1755,6 +1772,21 @@
               <td id="oct"><input type="radio" name="octq11" value="76+octq11"></td>
               <td id="nov"><input type="radio" name="novq11" value="76+novq11"></td>
               <td id="dic"><input type="radio" name="dicq11" value="76+dicq11"></td>
+            </tr>
+            <tr>
+              <th>No tuve ventas</th>
+              <td id="ene"><input type="radio" name="eneq11" value="notuveventaseneq11"></td>
+              <td id="feb"><input type="radio" name="febq11" value="notuveventasfebq11"></td>
+              <td id="mar"><input type="radio" name="marq11" value="notuveventasmarq11"></td>
+              <td id="abr"><input type="radio" name="abrq11" value="notuveventasabrq11"></td>
+              <td id="may"><input type="radio" name="mayq11" value="notuveventasmayq11"></td>
+              <td id="jun"><input type="radio" name="junq11" value="notuveventasjunq11"></td>
+              <td id="jul"><input type="radio" name="julq11" value="notuveventasjulq11"></td>
+              <td id="ago"><input type="radio" name="agoq11" value="notuveventasagoq11"></td>
+              <td id="sep"><input type="radio" name="sepq11" value="notuveventassepq11"></td>
+              <td id="oct"><input type="radio" name="octq11" value="notuveventasoctq11"></td>
+              <td id="nov"><input type="radio" name="novq11" value="notuveventasnovq11"></td>
+              <td id="dic"><input type="radio" name="dicq11" value="notuveventasdicq11"></td>
             </tr>
           </tbody>
         </table>
@@ -1892,11 +1924,26 @@
                 <div id="insertCitydicq12"></div>
               </td>
             </tr>
+            <tr>
+              <th>No tuve ventas</th>
+              <td id="ene"><input type="radio" name="eneq12" value="notuveventaseneq12"></td>
+              <td id="feb"><input type="radio" name="febq12" value="notuveventasfebq12"></td>
+              <td id="mar"><input type="radio" name="marq12" value="notuveventasmarq12"></td>
+              <td id="abr"><input type="radio" name="abrq12" value="notuveventasabrq12"></td>
+              <td id="may"><input type="radio" name="mayq12" value="notuveventasmayq12"></td>
+              <td id="jun"><input type="radio" name="junq12" value="notuveventasjunq12"></td>
+              <td id="jul"><input type="radio" name="julq12" value="notuveventasjulq12"></td>
+              <td id="ago"><input type="radio" name="agoq12" value="notuveventasagoq12"></td>
+              <td id="sep"><input type="radio" name="sepq12" value="notuveventassepq12"></td>
+              <td id="oct"><input type="radio" name="octq12" value="notuveventasoctq12"></td>
+              <td id="nov"><input type="radio" name="novq12" value="notuveventasnovq12"></td>
+              <td id="dic"><input type="radio" name="dicq12" value="notuveventasdicq12"></td>
+            </tr>
           </tbody>
         </table>
       </div>
       <div class="q13">
-        <h5>13.- ¿Cuántas <strong>casas</strong>, tienes disponibles a la venta actualmente?</h5>
+        <h5>13.- ¿Cuántas <strong>casas</strong>, tienes disponibles a la venta?</h5>
         <table class="table table-striped table-bordered">
           <tbody>
             <tr>
@@ -2083,7 +2130,7 @@
         </table>
       </div>
       <div class="q14">
-        <h5>14.- ¿Cuántos <strong>condominios</strong>, tienes disponibles a la venta actualmente?</h5>
+        <h5>14.- ¿Cuántos <strong>condominios</strong>, tienes disponibles a la venta?</h5>
         <table class="table table-striped table-bordered">
           <tbody>
             <tr>
@@ -2270,7 +2317,7 @@
         </table>
       </div>
       <div class="q15">
-        <h5>15.- ¿Cuántos <strong>lotes</strong>, tienes disponibles a la venta actualmente?</h5>
+        <h5>15.- ¿Cuántos <strong>lotes</strong>, tienes disponibles a la venta?</h5>
         <table class="table table-striped table-bordered">
           <tbody>
             <tr>
@@ -2574,6 +2621,21 @@
                 <div id="insertUsedicq16"></div>
               </td>
             </tr>
+            <tr>
+              <th>No tuve ventas</th>
+              <td id="ene"><input type="radio" name="eneq16" value="notuveventaseneq16"></td>
+              <td id="feb"><input type="radio" name="febq16" value="notuveventasfebq16"></td>
+              <td id="mar"><input type="radio" name="marq16" value="notuveventasmarq16"></td>
+              <td id="abr"><input type="radio" name="abrq16" value="notuveventasabrq16"></td>
+              <td id="may"><input type="radio" name="mayq16" value="notuveventasmayq16"></td>
+              <td id="jun"><input type="radio" name="junq16" value="notuveventasjunq16"></td>
+              <td id="jul"><input type="radio" name="julq16" value="notuveventasjulq16"></td>
+              <td id="ago"><input type="radio" name="agoq16" value="notuveventasagoq16"></td>
+              <td id="sep"><input type="radio" name="sepq16" value="notuveventassepq16"></td>
+              <td id="oct"><input type="radio" name="octq16" value="notuveventasoctq16"></td>
+              <td id="nov"><input type="radio" name="novq16" value="notuveventasnovq16"></td>
+              <td id="dic"><input type="radio" name="dicq16" value="notuveventasdicq16"></td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -2656,6 +2718,21 @@
               <td id="nov"><input type="radio" name="novq17" value="terrestrewalkinnovq17"></td>
               <td id="dic"><input type="radio" name="dicq17" value="terrestrewalkindicq17"></td>
             </tr>
+            <tr>
+              <th>No tuve ventas</th>
+              <td id="ene"><input type="radio" name="eneq17" value="notuveventaseneq17"></td>
+              <td id="feb"><input type="radio" name="febq17" value="notuveventasfebq17"></td>
+              <td id="mar"><input type="radio" name="marq17" value="notuveventasmarq17"></td>
+              <td id="abr"><input type="radio" name="abrq17" value="notuveventasabrq17"></td>
+              <td id="may"><input type="radio" name="mayq17" value="notuveventasmayq17"></td>
+              <td id="jun"><input type="radio" name="junq17" value="notuveventasjunq17"></td>
+              <td id="jul"><input type="radio" name="julq17" value="notuveventasjulq17"></td>
+              <td id="ago"><input type="radio" name="agoq17" value="notuveventasagoq17"></td>
+              <td id="sep"><input type="radio" name="sepq17" value="notuveventassepq17"></td>
+              <td id="oct"><input type="radio" name="octq17" value="notuveventasoctq17"></td>
+              <td id="nov"><input type="radio" name="novq17" value="notuveventasnovq17"></td>
+              <td id="dic"><input type="radio" name="dicq17" value="notuveventasdicq17"></td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -2677,6 +2754,21 @@
               <th id="oct">Oct</th>
               <th id="nov">Nov</th>
               <th id="dic">Dic</th>
+            </tr>
+            <tr>
+              <th>0</th>
+              <td id="ene"><input type="radio" name="eneq18" value="0eneq18"></td>
+              <td id="feb"><input type="radio" name="febq18" value="0febq18"></td>
+              <td id="mar"><input type="radio" name="marq18" value="0marq18"></td>
+              <td id="abr"><input type="radio" name="abrq18" value="0abrq18"></td>
+              <td id="may"><input type="radio" name="mayq18" value="0mayq18"></td>
+              <td id="jun"><input type="radio" name="junq18" value="0junq18"></td>
+              <td id="jul"><input type="radio" name="julq18" value="0julq18"></td>
+              <td id="ago"><input type="radio" name="agoq18" value="0agoq18"></td>
+              <td id="sep"><input type="radio" name="sepq18" value="0sepq18"></td>
+              <td id="oct"><input type="radio" name="octq18" value="0octq18"></td>
+              <td id="nov"><input type="radio" name="novq18" value="0novq18"></td>
+              <td id="dic"><input type="radio" name="dicq18" value="0dicq18"></td>
             </tr>
             <tr>
               <th>1 a 6</th>
