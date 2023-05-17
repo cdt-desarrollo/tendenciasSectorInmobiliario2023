@@ -38,951 +38,951 @@ let dicThElements = []
 let dicTdElements = []
 let activeMonths = []
 
-function setMonthsWithChechboxInTable(){
-  let monthsThText = document.getElementById("monthsThText")
-  let monthsText = ``;
-  for(let i = 0; i <= actualMonth; i++)
-  {
-    monthsThText.innerHTML = ``
-    if(i == 0)
-    {
-      monthsText = `
-      <th>
-        Ene
-        <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput"  onchange="getValuesFromSelectionMonths()">
-      </th>
-      `
-      monthsThText.innerHTML += monthsText
-    if(i == actualMonth)
-      {
-        break
-      }
-    }
-    if(i == 1)
-    {
-      monthsText = `
-      <th>
-        Ene
-        <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Feb
-        <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      `
-      monthsThText.innerHTML += monthsText
-      if(i == actualMonth)
-      {
-        break
-      }
-    }
-    if(i == 2)
-    {
-      monthsText = `
-      <th>
-        Ene
-        <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Feb
-        <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Mar
-        <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
-      </th>
-      `
-      monthsThText.innerHTML += monthsText
-      if(i == actualMonth)
-      {
-        break
-      }
-    }
-    if(i == 3)
-    {
-      monthsText = `
-      <th>
-        Ene
-        <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Feb
-        <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Mar
-        <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
-      </th>
-      <th>
-        Abr
-        <input class="form-check-input" type="checkbox" name="m1" value="abr" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      `
+// function setMonthsWithChechboxInTable(){
+//   let monthsThText = document.getElementById("monthsThText")
+//   let monthsText = ``;
+//   for(let i = 0; i <= actualMonth; i++)
+//   {
+//     monthsThText.innerHTML = ``
+//     if(i == 0)
+//     {
+//       monthsText = `
+//       <th>
+//         Ene
+//         <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput"  onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       `
+//       monthsThText.innerHTML += monthsText
+//     if(i == actualMonth)
+//       {
+//         break
+//       }
+//     }
+//     if(i == 1)
+//     {
+//       monthsText = `
+//       <th>
+//         Ene
+//         <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Feb
+//         <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       `
+//       monthsThText.innerHTML += monthsText
+//       if(i == actualMonth)
+//       {
+//         break
+//       }
+//     }
+//     if(i == 2)
+//     {
+//       monthsText = `
+//       <th>
+//         Ene
+//         <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Feb
+//         <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Mar
+//         <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
+//       </th>
+//       `
+//       monthsThText.innerHTML += monthsText
+//       if(i == actualMonth)
+//       {
+//         break
+//       }
+//     }
+//     if(i == 3)
+//     {
+//       monthsText = `
+//       <th>
+//         Ene
+//         <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Feb
+//         <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Mar
+//         <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
+//       </th>
+//       <th>
+//         Abr
+//         <input class="form-check-input" type="checkbox" name="m1" value="abr" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       `
       
-      monthsThText.innerHTML += monthsText
-      if(i == actualMonth)
-      {
-        break
-      }
-    }
-    if(i == 4)
-    {
-    monthsText = `
-      <th>
-        Ene
-        <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Feb
-        <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Mar
-        <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
-      </th>
-      <th>
-        Abr
-        <input class="form-check-input" type="checkbox" name="m1" value="abr" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        May
-        <input class="form-check-input" type="checkbox" name="m1" value="may" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      `
-      monthsThText.innerHTML += monthsText
-      if(i == actualMonth)
-      {
-        break
-      }
-    }
-    if(i == 5)
-    {
-      monthsText = `
-      <th>
-        Ene
-        <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Feb
-        <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Mar
-        <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
-      </th>
-      <th>
-        Abr
-        <input class="form-check-input" type="checkbox" name="m1" value="abr" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        May
-        <input class="form-check-input" type="checkbox" name="m1" value="may" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Jun
-        <input class="form-check-input" type="checkbox" name="m1" value="jun" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      `
-      monthsThText.innerHTML += monthsText
-      if(i == actualMonth)
-      {
-        break
-      }
-    }
-    if(i == 6)
-    {
-      monthsText = `
-      <th>
-        Ene
-        <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Feb
-        <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Mar
-        <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
-      </th>
-      <th>
-        Abr
-        <input class="form-check-input" type="checkbox" name="m1" value="abr" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        May
-        <input class="form-check-input" type="checkbox" name="m1" value="may" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Jun
-        <input class="form-check-input" type="checkbox" name="m1" value="jun" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Jul
-        <input class="form-check-input" type="checkbox" name="m1" value="jul" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      `
-      monthsThText.innerHTML += monthsText
-      if(i == actualMonth)
-      {
-        break
-      }
-    }
-    if(i == 7)
-    {
-      monthsText = `
-      <th>
-        Ene
-        <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Feb
-        <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Mar
-        <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
-      </th>
-      <th>
-        Abr
-        <input class="form-check-input" type="checkbox" name="m1" value="abr" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        May
-        <input class="form-check-input" type="checkbox" name="m1" value="may" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Jun
-        <input class="form-check-input" type="checkbox" name="m1" value="jun" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Jul
-        <input class="form-check-input" type="checkbox" name="m1" value="jul" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Ago
-        <input class="form-check-input" type="checkbox" name="m1" value="ago" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      `
-      monthsThText.innerHTML += monthsText
-      if(i == actualMonth)
-      {
-        break
-      }
-    }
-    if(i == 8)
-    {
-      monthsText = `
-      <th>
-        Ene
-        <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Feb
-        <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Mar
-        <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
-      </th>
-      <th>
-        Abr
-        <input class="form-check-input" type="checkbox" name="m1" value="abr" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        May
-        <input class="form-check-input" type="checkbox" name="m1" value="may" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Jun
-        <input class="form-check-input" type="checkbox" name="m1" value="jun" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Jul
-        <input class="form-check-input" type="checkbox" name="m1" value="jul" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Ago
-        <input class="form-check-input" type="checkbox" name="m1" value="ago" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Sep
-        <input class="form-check-input" type="checkbox" name="m1" value="sep" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      `
-      monthsThText.innerHTML += monthsText
-      if(i == actualMonth)
-      {
-        break
-      }
-    }
-    if(i == 9)
-    {
-      monthsText = `
-      <th>
-        Ene
-        <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Feb
-        <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Mar
-        <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
-      </th>
-      <th>
-        Abr
-        <input class="form-check-input" type="checkbox" name="m1" value="abr" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        May
-        <input class="form-check-input" type="checkbox" name="m1" value="may" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Jun
-        <input class="form-check-input" type="checkbox" name="m1" value="jun" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Jul
-        <input class="form-check-input" type="checkbox" name="m1" value="jul" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Ago
-        <input class="form-check-input" type="checkbox" name="m1" value="ago" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Sep
-        <input class="form-check-input" type="checkbox" name="m1" value="sep" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Oct
-        <input class="form-check-input" type="checkbox" name="m1" value="oct" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      `
-      monthsThText.innerHTML += monthsText
-      if(i == actualMonth)
-      {
-        break
-      }
-    }
-    if(i == 10)
-    {
-      monthsText = `
-      <th>
-        Ene
-        <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Feb
-        <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Mar
-        <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
-      </th>
-      <th>
-        Abr
-        <input class="form-check-input" type="checkbox" name="m1" value="abr" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        May
-        <input class="form-check-input" type="checkbox" name="m1" value="may" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Jun
-        <input class="form-check-input" type="checkbox" name="m1" value="jun" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Jul
-        <input class="form-check-input" type="checkbox" name="m1" value="jul" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Ago
-        <input class="form-check-input" type="checkbox" name="m1" value="ago" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Sep
-        <input class="form-check-input" type="checkbox" name="m1" value="sep" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Oct
-        <input class="form-check-input" type="checkbox" name="m1" value="oct" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Nov
-        <input class="form-check-input" type="checkbox" name="m1" value="nov" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      `
-      monthsThText.innerHTML += monthsText
-      if(i == actualMonth)
-      {
-        break
-      }
-    }
-    if(i == 11)
-    {
-      monthsText = `
-      <th>
-        Ene
-        <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Feb
-        <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Mar
-        <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
-      </th>
-      <th>
-        Abr
-        <input class="form-check-input" type="checkbox" name="m1" value="abr" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        May
-        <input class="form-check-input" type="checkbox" name="m1" value="may" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Jun
-        <input class="form-check-input" type="checkbox" name="m1" value="jun" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Jul
-        <input class="form-check-input" type="checkbox" name="m1" value="jul" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Ago
-        <input class="form-check-input" type="checkbox" name="m1" value="ago" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Sep
-        <input class="form-check-input" type="checkbox" name="m1" value="sep" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Oct
-        <input class="form-check-input" type="checkbox" name="m1" value="oct" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Nov
-        <input class="form-check-input" type="checkbox" name="m1" value="nov" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      <th>
-        Dic
-        <input class="form-check-input" type="checkbox" name="m1" value="dic" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
-      </th>
-      `
-      monthsThText.innerHTML += monthsText
-      if(i == actualMonth)
-      {
-        break
-      }
-    }
-  }
-}
-function getValuesFromSelectionMonths(){
-  let months = []
-  var ele = document.getElementsByTagName("input");
-  for (let i = 0; i < ele.length; i++)
-  {
-    if(ele[i].type == "checkbox" && ele[i].checked == true){
-        months.push(ele[i].value)
-    }
-  }
-  designTablesByPastMonths(months)
-}
-function designTablesByPastMonths(array){
-  let inputRadioElements = document.getElementsByTagName("input")
-  let thElements = document.getElementsByTagName("th")
-  let tdElements = document.getElementsByTagName("td")
-  let tables = document.getElementsByTagName("table")
-  if (array.length == 0) {
-    for (let i = 0; i < thElements.length; i++) {
-      if (thElements[i].id === "ene") {
-        eneThElements.push(thElements[i])
-      }
-      else if (thElements[i].id === "feb") {
-        febThElements.push(thElements[i])
-      }
-      else if (thElements[i].id === "mar") {
-        marThElements.push(thElements[i])
-      }
-      else if (thElements[i].id === "abr") {
-        abrThElements.push(thElements[i])
-      }
-      else if (thElements[i].id === "may") {
-        mayThElements.push(thElements[i])
-      }
-      else if (thElements[i].id === "jun") {
-        junThElements.push(thElements[i])
-      }
-      else if (thElements[i].id === "jul") {
-        julThElements.push(thElements[i])
-      }
-      else if (thElements[i].id === "ago") {
-        agoThElements.push(thElements[i])
-      }
-      else if (thElements[i].id === "sep") {
-        sepThElements.push(thElements[i])
-      }
-      else if (thElements[i].id === "oct") {
-        octThElements.push(thElements[i])
-      }
-      else if (thElements[i].id === "nov") {
-        novThElements.push(thElements[i])
-      }
-      else if (thElements[i].id === "dic") {
-        dicThElements.push(thElements[i])
-      }
-    }
-    for (let i = 0; i < tdElements.length; i++) {
-      if (tdElements[i].id === "ene") {
-        eneTdElements.push(tdElements[i])
-      }
-      else if (tdElements[i].id === "feb") {
-        febTdElements.push(tdElements[i])
-      }
-      else if (tdElements[i].id === "mar") {
-        marTdElements.push(tdElements[i])
-      }
-      else if (tdElements[i].id === "abr") {
-        abrTdElements.push(tdElements[i])
-      }
-      else if (tdElements[i].id === "may") {
-        mayTdElements.push(tdElements[i])
-      }
-      else if (tdElements[i].id === "jun") {
-        junTdElements.push(tdElements[i])
-      }
-      else if (tdElements[i].id === "jul") {
-        julTdElements.push(tdElements[i])
-      }
-      else if (tdElements[i].id === "ago") {
-        agoTdElements.push(tdElements[i])
-      }
-      else if (tdElements[i].id === "sep") {
-        sepTdElements.push(tdElements[i])
-      }
-      else if (tdElements[i].id === "oct") {
-        octTdElements.push(tdElements[i])
-      }
-      else if (tdElements[i].id === "nov") {
-        novTdElements.push(tdElements[i])
-      }
-      else if (tdElements[i].id === "dic") {
-        dicTdElements.push(tdElements[i])
-      }
-    }
-    for (let i = 0; i <= 11; i++) {
-      if (i == 0) {
-        for (let k = 0; k < eneThElements.length; k++) {
-          eneThElements[k].style.display = "table-cell";
-          febThElements[k].style.display = "none";
-          marThElements[k].style.display = "none";
-          abrThElements[k].style.display = "none";
-          mayThElements[k].style.display = "none";
-          junThElements[k].style.display = "none";
-          julThElements[k].style.display = "none";
-          agoThElements[k].style.display = "none";
-          sepThElements[k].style.display = "none";
-          octThElements[k].style.display = "none";
-          novThElements[k].style.display = "none";
-          dicThElements[k].style.display = "none";
-        }
-        for (let k = 0; k < eneTdElements.length; k++) {
-          eneTdElements[k].style.display = "table-cell";
-          febTdElements[k].style.display = "none";
-          marTdElements[k].style.display = "none";
-          abrTdElements[k].style.display = "none";
-          mayTdElements[k].style.display = "none";
-          junTdElements[k].style.display = "none";
-          julTdElements[k].style.display = "none";
-          agoTdElements[k].style.display = "none";
-          sepTdElements[k].style.display = "none";
-          octTdElements[k].style.display = "none";
-          novTdElements[k].style.display = "none";
-          dicTdElements[k].style.display = "none";
-        }
-        if (i == actualMonth) {
-          console.log(actualMonth)
-          break
-        }
-      }
-      if (i == 1) {
-        for (let k = 0; k < eneThElements.length; k++) {
-          eneThElements[k].style.display = "table-cell";
-          febThElements[k].style.display = "table-cell";
-          marThElements[k].style.display = "none";
-          abrThElements[k].style.display = "none";
-          mayThElements[k].style.display = "none";
-          junThElements[k].style.display = "none";
-          julThElements[k].style.display = "none";
-          agoThElements[k].style.display = "none";
-          sepThElements[k].style.display = "none";
-          octThElements[k].style.display = "none";
-          novThElements[k].style.display = "none";
-          dicThElements[k].style.display = "none";
-        }
-        for (let k = 0; k < eneTdElements.length; k++) {
-          eneTdElements[k].style.display = "table-cell";
-          febTdElements[k].style.display = "table-cell";
-          marTdElements[k].style.display = "none";
-          abrTdElements[k].style.display = "none";
-          mayTdElements[k].style.display = "none";
-          junTdElements[k].style.display = "none";
-          julTdElements[k].style.display = "none";
-          agoTdElements[k].style.display = "none";
-          sepTdElements[k].style.display = "none";
-          octTdElements[k].style.display = "none";
-          novTdElements[k].style.display = "none";
-          dicTdElements[k].style.display = "none";
-        }
-        if (i == actualMonth) {
-          console.log(actualMonth)
-          break
-        }
-      }
-      if (i == 2) {
-        for (let k = 0; k < eneThElements.length; k++) {
-          eneThElements[k].style.display = "table-cell";
-          febThElements[k].style.display = "table-cell";
-          marThElements[k].style.display = "table-cell";
-          abrThElements[k].style.display = "none";
-          mayThElements[k].style.display = "none";
-          junThElements[k].style.display = "none";
-          julThElements[k].style.display = "none";
-          agoThElements[k].style.display = "none";
-          sepThElements[k].style.display = "none";
-          octThElements[k].style.display = "none";
-          novThElements[k].style.display = "none";
-          dicThElements[k].style.display = "none";
-        }
-        for (let k = 0; k < eneTdElements.length; k++) {
-          eneTdElements[k].style.display = "table-cell";
-          febTdElements[k].style.display = "table-cell";
-          marTdElements[k].style.display = "table-cell";
-          abrTdElements[k].style.display = "none";
-          mayTdElements[k].style.display = "none";
-          junTdElements[k].style.display = "none";
-          julTdElements[k].style.display = "none";
-          agoTdElements[k].style.display = "none";
-          sepTdElements[k].style.display = "none";
-          octTdElements[k].style.display = "none";
-          novTdElements[k].style.display = "none";
-          dicTdElements[k].style.display = "none";
-        }
-        if (i == actualMonth) {
-          console.log(actualMonth)
-          break
-        }
-      }
-      if (i == 3) {
-        for (let k = 0; k < eneThElements.length; k++) {
-          eneThElements[k].style.display = "table-cell";
-          febThElements[k].style.display = "table-cell";
-          marThElements[k].style.display = "table-cell";
-          abrThElements[k].style.display = "table-cell";
-          mayThElements[k].style.display = "none";
-          junThElements[k].style.display = "none";
-          julThElements[k].style.display = "none";
-          agoThElements[k].style.display = "none";
-          sepThElements[k].style.display = "none";
-          octThElements[k].style.display = "none";
-          novThElements[k].style.display = "none";
-          dicThElements[k].style.display = "none";
-        }
-        for (let k = 0; k < eneTdElements.length; k++) {
-          eneTdElements[k].style.display = "table-cell";
-          febTdElements[k].style.display = "table-cell";
-          marTdElements[k].style.display = "table-cell";
-          abrTdElements[k].style.display = "table-cell";
-          mayTdElements[k].style.display = "none";
-          junTdElements[k].style.display = "none";
-          julTdElements[k].style.display = "none";
-          agoTdElements[k].style.display = "none";
-          sepTdElements[k].style.display = "none";
-          octTdElements[k].style.display = "none";
-          novTdElements[k].style.display = "none";
-          dicTdElements[k].style.display = "none";
-        }
-        if (i == actualMonth) {
-          break
-        }
-      }
-      if (i == 4) {
-        for (let k = 0; k < eneThElements.length; k++) {
-          eneThElements[k].style.display = "table-cell";
-          febThElements[k].style.display = "table-cell";
-          marThElements[k].style.display = "table-cell";
-          abrThElements[k].style.display = "table-cell";
-          mayThElements[k].style.display = "table-cell";
-          junThElements[k].style.display = "none";
-          julThElements[k].style.display = "none";
-          agoThElements[k].style.display = "none";
-          sepThElements[k].style.display = "none";
-          octThElements[k].style.display = "none";
-          novThElements[k].style.display = "none";
-          dicThElements[k].style.display = "none";
-        }
-        for (let k = 0; k < eneTdElements.length; k++) {
-          eneTdElements[k].style.display = "table-cell";
-          febTdElements[k].style.display = "table-cell";
-          marTdElements[k].style.display = "table-cell";
-          abrTdElements[k].style.display = "table-cell";
-          mayTdElements[k].style.display = "table-cell";
-          junTdElements[k].style.display = "none";
-          julTdElements[k].style.display = "none";
-          agoTdElements[k].style.display = "none";
-          sepTdElements[k].style.display = "none";
-          octTdElements[k].style.display = "none";
-          novTdElements[k].style.display = "none";
-          dicTdElements[k].style.display = "none";
-        }
-        if (i == actualMonth) {
-          console.log(actualMonth)
-          break
-        }
-      }
-      if (i == 5) {
-        for (let k = 0; k < eneThElements.length; k++) {
-          eneThElements[k].style.display = "table-cell";
-          febThElements[k].style.display = "table-cell";
-          marThElements[k].style.display = "table-cell";
-          abrThElements[k].style.display = "table-cell";
-          mayThElements[k].style.display = "table-cell";
-          junThElements[k].style.display = "table-cell";
-          julThElements[k].style.display = "none";
-          agoThElements[k].style.display = "none";
-          sepThElements[k].style.display = "none";
-          octThElements[k].style.display = "none";
-          novThElements[k].style.display = "none";
-          dicThElements[k].style.display = "none";
-        }
-        for (let k = 0; k < eneTdElements.length; k++) {
-          eneTdElements[k].style.display = "table-cell";
-          febTdElements[k].style.display = "table-cell";
-          marTdElements[k].style.display = "table-cell";
-          abrTdElements[k].style.display = "table-cell";
-          mayTdElements[k].style.display = "table-cell";
-          junTdElements[k].style.display = "table-cell";
-          julTdElements[k].style.display = "none";
-          agoTdElements[k].style.display = "none";
-          sepTdElements[k].style.display = "none";
-          octTdElements[k].style.display = "none";
-          novTdElements[k].style.display = "none";
-          dicTdElements[k].style.display = "none";
-        }
-        if (i == actualMonth) {
-          console.log(actualMonth)
-          break
-        }
-      }
-      if (i == 6) {
-        for (let k = 0; k < eneThElements.length; k++) {
-          eneThElements[k].style.display = "table-cell";
-          febThElements[k].style.display = "table-cell";
-          marThElements[k].style.display = "table-cell";
-          abrThElements[k].style.display = "table-cell";
-          mayThElements[k].style.display = "table-cell";
-          junThElements[k].style.display = "table-cell";
-          julThElements[k].style.display = "table-cell";
-          agoThElements[k].style.display = "none";
-          sepThElements[k].style.display = "none";
-          octThElements[k].style.display = "none";
-          novThElements[k].style.display = "none";
-          dicThElements[k].style.display = "none";
-        }
-        for (let k = 0; k < eneTdElements.length; k++) {
-          eneTdElements[k].style.display = "table-cell";
-          febTdElements[k].style.display = "table-cell";
-          marTdElements[k].style.display = "table-cell";
-          abrTdElements[k].style.display = "table-cell";
-          mayTdElements[k].style.display = "table-cell";
-          junTdElements[k].style.display = "table-cell";
-          julTdElements[k].style.display = "table-cell";
-          agoTdElements[k].style.display = "none";
-          sepTdElements[k].style.display = "none";
-          octTdElements[k].style.display = "none";
-          novTdElements[k].style.display = "none";
-          dicTdElements[k].style.display = "none";
-        }
-        if (i == actualMonth) {
-          console.log(actualMonth)
-          break
-        }
-      }
-      if (i == 7) {
-        for (let k = 0; k < eneThElements.length; k++) {
-          eneThElements[k].style.display = "table-cell";
-          febThElements[k].style.display = "table-cell";
-          marThElements[k].style.display = "table-cell";
-          abrThElements[k].style.display = "table-cell";
-          mayThElements[k].style.display = "table-cell";
-          junThElements[k].style.display = "table-cell";
-          julThElements[k].style.display = "table-cell";
-          agoThElements[k].style.display = "table-cell";
-          sepThElements[k].style.display = "none";
-          octThElements[k].style.display = "none";
-          novThElements[k].style.display = "none";
-          dicThElements[k].style.display = "none";
-        }
-        for (let k = 0; k < eneTdElements.length; k++) {
-          eneTdElements[k].style.display = "table-cell";
-          febTdElements[k].style.display = "table-cell";
-          marTdElements[k].style.display = "table-cell";
-          abrTdElements[k].style.display = "table-cell";
-          mayTdElements[k].style.display = "table-cell";
-          junTdElements[k].style.display = "table-cell";
-          julTdElements[k].style.display = "table-cell";
-          agoTdElements[k].style.display = "table-cell";
-          sepTdElements[k].style.display = "none";
-          octTdElements[k].style.display = "none";
-          novTdElements[k].style.display = "none";
-          dicTdElements[k].style.display = "none";
-        }
-        if (i == actualMonth) {
-          console.log(actualMonth)
-          break
-        }
-      }
-      if (i == 8) {
-        for (let k = 0; k < eneThElements.length; k++) {
-          eneThElements[k].style.display = "table-cell";
-          febThElements[k].style.display = "table-cell";
-          marThElements[k].style.display = "table-cell";
-          abrThElements[k].style.display = "table-cell";
-          mayThElements[k].style.display = "table-cell";
-          junThElements[k].style.display = "table-cell";
-          julThElements[k].style.display = "table-cell";
-          agoThElements[k].style.display = "table-cell";
-          sepThElements[k].style.display = "table-cell";
-          octThElements[k].style.display = "none";
-          novThElements[k].style.display = "none";
-          dicThElements[k].style.display = "none";
-        }
-        for (let k = 0; k < eneTdElements.length; k++) {
-          eneTdElements[k].style.display = "table-cell";
-          febTdElements[k].style.display = "table-cell";
-          marTdElements[k].style.display = "table-cell";
-          abrTdElements[k].style.display = "table-cell";
-          mayTdElements[k].style.display = "table-cell";
-          junTdElements[k].style.display = "table-cell";
-          julTdElements[k].style.display = "table-cell";
-          agoTdElements[k].style.display = "table-cell";
-          sepTdElements[k].style.display = "table-cell";
-          octTdElements[k].style.display = "none";
-          novTdElements[k].style.display = "none";
-          dicTdElements[k].style.display = "none";
-        }
-        if (i == actualMonth) {
-          console.log(actualMonth)
-          break
-        }
-      }
-      if (i == 9) {
-        for (let k = 0; k < eneThElements.length; k++) {
-          eneThElements[k].style.display = "table-cell";
-          febThElements[k].style.display = "table-cell";
-          marThElements[k].style.display = "table-cell";
-          abrThElements[k].style.display = "table-cell";
-          mayThElements[k].style.display = "table-cell";
-          junThElements[k].style.display = "table-cell";
-          julThElements[k].style.display = "table-cell";
-          agoThElements[k].style.display = "table-cell";
-          sepThElements[k].style.display = "table-cell";
-          octThElements[k].style.display = "table-cell";
-          novThElements[k].style.display = "none";
-          dicThElements[k].style.display = "none";
-        }
-        for (let k = 0; k < eneTdElements.length; k++) {
-          eneTdElements[k].style.display = "table-cell";
-          febTdElements[k].style.display = "table-cell";
-          marTdElements[k].style.display = "table-cell";
-          abrTdElements[k].style.display = "table-cell";
-          mayTdElements[k].style.display = "table-cell";
-          junTdElements[k].style.display = "table-cell";
-          julTdElements[k].style.display = "table-cell";
-          agoTdElements[k].style.display = "table-cell";
-          sepTdElements[k].style.display = "table-cell";
-          octTdElements[k].style.display = "table-cell";
-          novTdElements[k].style.display = "none";
-          dicTdElements[k].style.display = "none";
-        }
-        if (i == actualMonth) {
-          console.log(actualMonth)
-          break
-        }
-      }
-      if (i == 10) {
-        for (let k = 0; k < eneThElements.length; k++) {
-          eneThElements[k].style.display = "table-cell";
-          febThElements[k].style.display = "table-cell";
-          marThElements[k].style.display = "table-cell";
-          abrThElements[k].style.display = "table-cell";
-          mayThElements[k].style.display = "table-cell";
-          junThElements[k].style.display = "table-cell";
-          julThElements[k].style.display = "table-cell";
-          agoThElements[k].style.display = "table-cell";
-          sepThElements[k].style.display = "table-cell";
-          octThElements[k].style.display = "table-cell";
-          novThElements[k].style.display = "table-cell";
-          dicThElements[k].style.display = "none";
-        }
-        for (let k = 0; k < eneTdElements.length; k++) {
-          eneTdElements[k].style.display = "table-cell";
-          febTdElements[k].style.display = "table-cell";
-          marTdElements[k].style.display = "table-cell";
-          abrTdElements[k].style.display = "table-cell";
-          mayTdElements[k].style.display = "table-cell";
-          junTdElements[k].style.display = "table-cell";
-          julTdElements[k].style.display = "table-cell";
-          agoTdElements[k].style.display = "table-cell";
-          sepTdElements[k].style.display = "table-cell";
-          octTdElements[k].style.display = "table-cell";
-          novTdElements[k].style.display = "table-cell";
-          dicTdElements[k].style.display = "none";
-        }
-        if (i == actualMonth) {
-          console.log(actualMonth)
-          break
-        }
-      }
-      if (i == 11) {
-        for (let k = 0; k < eneThElements.length; k++) {
-          eneThElements[k].style.display = "table-cell";
-          febThElements[k].style.display = "table-cell";
-          marThElements[k].style.display = "table-cell";
-          abrThElements[k].style.display = "table-cell";
-          mayThElements[k].style.display = "table-cell";
-          junThElements[k].style.display = "table-cell";
-          julThElements[k].style.display = "table-cell";
-          agoThElements[k].style.display = "table-cell";
-          sepThElements[k].style.display = "table-cell";
-          octThElements[k].style.display = "table-cell";
-          novThElements[k].style.display = "table-cell";
-          dicThElements[k].style.display = "table-cell";
-        }
-        for (let k = 0; k < eneTdElements.length; k++) {
-          eneTdElements[k].style.display = "table-cell";
-          febTdElements[k].style.display = "table-cell";
-          marTdElements[k].style.display = "table-cell";
-          abrTdElements[k].style.display = "table-cell";
-          mayTdElements[k].style.display = "table-cell";
-          junTdElements[k].style.display = "table-cell";
-          julTdElements[k].style.display = "table-cell";
-          agoTdElements[k].style.display = "table-cell";
-          sepTdElements[k].style.display = "table-cell";
-          octTdElements[k].style.display = "table-cell";
-          novTdElements[k].style.display = "table-cell";
-          dicTdElements[k].style.display = "table-cell";
-        }
-        if (i == actualMonth) {
-          console.log(actualMonth)
-          break
-        }
-      }
-    }
-  }
-}
+//       monthsThText.innerHTML += monthsText
+//       if(i == actualMonth)
+//       {
+//         break
+//       }
+//     }
+//     if(i == 4)
+//     {
+//     monthsText = `
+//       <th>
+//         Ene
+//         <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Feb
+//         <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Mar
+//         <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
+//       </th>
+//       <th>
+//         Abr
+//         <input class="form-check-input" type="checkbox" name="m1" value="abr" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         May
+//         <input class="form-check-input" type="checkbox" name="m1" value="may" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       `
+//       monthsThText.innerHTML += monthsText
+//       if(i == actualMonth)
+//       {
+//         break
+//       }
+//     }
+//     if(i == 5)
+//     {
+//       monthsText = `
+//       <th>
+//         Ene
+//         <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Feb
+//         <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Mar
+//         <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
+//       </th>
+//       <th>
+//         Abr
+//         <input class="form-check-input" type="checkbox" name="m1" value="abr" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         May
+//         <input class="form-check-input" type="checkbox" name="m1" value="may" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Jun
+//         <input class="form-check-input" type="checkbox" name="m1" value="jun" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       `
+//       monthsThText.innerHTML += monthsText
+//       if(i == actualMonth)
+//       {
+//         break
+//       }
+//     }
+//     if(i == 6)
+//     {
+//       monthsText = `
+//       <th>
+//         Ene
+//         <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Feb
+//         <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Mar
+//         <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
+//       </th>
+//       <th>
+//         Abr
+//         <input class="form-check-input" type="checkbox" name="m1" value="abr" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         May
+//         <input class="form-check-input" type="checkbox" name="m1" value="may" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Jun
+//         <input class="form-check-input" type="checkbox" name="m1" value="jun" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Jul
+//         <input class="form-check-input" type="checkbox" name="m1" value="jul" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       `
+//       monthsThText.innerHTML += monthsText
+//       if(i == actualMonth)
+//       {
+//         break
+//       }
+//     }
+//     if(i == 7)
+//     {
+//       monthsText = `
+//       <th>
+//         Ene
+//         <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Feb
+//         <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Mar
+//         <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
+//       </th>
+//       <th>
+//         Abr
+//         <input class="form-check-input" type="checkbox" name="m1" value="abr" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         May
+//         <input class="form-check-input" type="checkbox" name="m1" value="may" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Jun
+//         <input class="form-check-input" type="checkbox" name="m1" value="jun" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Jul
+//         <input class="form-check-input" type="checkbox" name="m1" value="jul" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Ago
+//         <input class="form-check-input" type="checkbox" name="m1" value="ago" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       `
+//       monthsThText.innerHTML += monthsText
+//       if(i == actualMonth)
+//       {
+//         break
+//       }
+//     }
+//     if(i == 8)
+//     {
+//       monthsText = `
+//       <th>
+//         Ene
+//         <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Feb
+//         <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Mar
+//         <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
+//       </th>
+//       <th>
+//         Abr
+//         <input class="form-check-input" type="checkbox" name="m1" value="abr" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         May
+//         <input class="form-check-input" type="checkbox" name="m1" value="may" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Jun
+//         <input class="form-check-input" type="checkbox" name="m1" value="jun" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Jul
+//         <input class="form-check-input" type="checkbox" name="m1" value="jul" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Ago
+//         <input class="form-check-input" type="checkbox" name="m1" value="ago" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Sep
+//         <input class="form-check-input" type="checkbox" name="m1" value="sep" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       `
+//       monthsThText.innerHTML += monthsText
+//       if(i == actualMonth)
+//       {
+//         break
+//       }
+//     }
+//     if(i == 9)
+//     {
+//       monthsText = `
+//       <th>
+//         Ene
+//         <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Feb
+//         <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Mar
+//         <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
+//       </th>
+//       <th>
+//         Abr
+//         <input class="form-check-input" type="checkbox" name="m1" value="abr" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         May
+//         <input class="form-check-input" type="checkbox" name="m1" value="may" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Jun
+//         <input class="form-check-input" type="checkbox" name="m1" value="jun" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Jul
+//         <input class="form-check-input" type="checkbox" name="m1" value="jul" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Ago
+//         <input class="form-check-input" type="checkbox" name="m1" value="ago" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Sep
+//         <input class="form-check-input" type="checkbox" name="m1" value="sep" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Oct
+//         <input class="form-check-input" type="checkbox" name="m1" value="oct" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       `
+//       monthsThText.innerHTML += monthsText
+//       if(i == actualMonth)
+//       {
+//         break
+//       }
+//     }
+//     if(i == 10)
+//     {
+//       monthsText = `
+//       <th>
+//         Ene
+//         <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Feb
+//         <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Mar
+//         <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
+//       </th>
+//       <th>
+//         Abr
+//         <input class="form-check-input" type="checkbox" name="m1" value="abr" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         May
+//         <input class="form-check-input" type="checkbox" name="m1" value="may" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Jun
+//         <input class="form-check-input" type="checkbox" name="m1" value="jun" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Jul
+//         <input class="form-check-input" type="checkbox" name="m1" value="jul" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Ago
+//         <input class="form-check-input" type="checkbox" name="m1" value="ago" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Sep
+//         <input class="form-check-input" type="checkbox" name="m1" value="sep" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Oct
+//         <input class="form-check-input" type="checkbox" name="m1" value="oct" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Nov
+//         <input class="form-check-input" type="checkbox" name="m1" value="nov" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       `
+//       monthsThText.innerHTML += monthsText
+//       if(i == actualMonth)
+//       {
+//         break
+//       }
+//     }
+//     if(i == 11)
+//     {
+//       monthsText = `
+//       <th>
+//         Ene
+//         <input class="form-check-input" type="checkbox" name="m1" value="ene" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Feb
+//         <input class="form-check-input" type="checkbox" name="m1" value="feb" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Mar
+//         <input class="form-check-input" type="checkbox" name="m1" value="mar" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">        
+//       </th>
+//       <th>
+//         Abr
+//         <input class="form-check-input" type="checkbox" name="m1" value="abr" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         May
+//         <input class="form-check-input" type="checkbox" name="m1" value="may" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Jun
+//         <input class="form-check-input" type="checkbox" name="m1" value="jun" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Jul
+//         <input class="form-check-input" type="checkbox" name="m1" value="jul" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Ago
+//         <input class="form-check-input" type="checkbox" name="m1" value="ago" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Sep
+//         <input class="form-check-input" type="checkbox" name="m1" value="sep" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Oct
+//         <input class="form-check-input" type="checkbox" name="m1" value="oct" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Nov
+//         <input class="form-check-input" type="checkbox" name="m1" value="nov" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       <th>
+//         Dic
+//         <input class="form-check-input" type="checkbox" name="m1" value="dic" id="monthRadioInput" onchange="getValuesFromSelectionMonths()">
+//       </th>
+//       `
+//       monthsThText.innerHTML += monthsText
+//       if(i == actualMonth)
+//       {
+//         break
+//       }
+//     }
+//   }
+// }
+// function getValuesFromSelectionMonths(){
+//   let months = []
+//   var ele = document.getElementsByTagName("input");
+//   for (let i = 0; i < ele.length; i++)
+//   {
+//     if(ele[i].type == "checkbox" && ele[i].checked == true){
+//         months.push(ele[i].value)
+//     }
+//   }
+//   designTablesByPastMonths(months)
+// }
+// function designTablesByPastMonths(array){
+//   let inputRadioElements = document.getElementsByTagName("input")
+//   let thElements = document.getElementsByTagName("th")
+//   let tdElements = document.getElementsByTagName("td")
+//   let tables = document.getElementsByTagName("table")
+//   if (array.length == 0) {
+//     for (let i = 0; i < thElements.length; i++) {
+//       if (thElements[i].id === "ene") {
+//         eneThElements.push(thElements[i])
+//       }
+//       else if (thElements[i].id === "feb") {
+//         febThElements.push(thElements[i])
+//       }
+//       else if (thElements[i].id === "mar") {
+//         marThElements.push(thElements[i])
+//       }
+//       else if (thElements[i].id === "abr") {
+//         abrThElements.push(thElements[i])
+//       }
+//       else if (thElements[i].id === "may") {
+//         mayThElements.push(thElements[i])
+//       }
+//       else if (thElements[i].id === "jun") {
+//         junThElements.push(thElements[i])
+//       }
+//       else if (thElements[i].id === "jul") {
+//         julThElements.push(thElements[i])
+//       }
+//       else if (thElements[i].id === "ago") {
+//         agoThElements.push(thElements[i])
+//       }
+//       else if (thElements[i].id === "sep") {
+//         sepThElements.push(thElements[i])
+//       }
+//       else if (thElements[i].id === "oct") {
+//         octThElements.push(thElements[i])
+//       }
+//       else if (thElements[i].id === "nov") {
+//         novThElements.push(thElements[i])
+//       }
+//       else if (thElements[i].id === "dic") {
+//         dicThElements.push(thElements[i])
+//       }
+//     }
+//     for (let i = 0; i < tdElements.length; i++) {
+//       if (tdElements[i].id === "ene") {
+//         eneTdElements.push(tdElements[i])
+//       }
+//       else if (tdElements[i].id === "feb") {
+//         febTdElements.push(tdElements[i])
+//       }
+//       else if (tdElements[i].id === "mar") {
+//         marTdElements.push(tdElements[i])
+//       }
+//       else if (tdElements[i].id === "abr") {
+//         abrTdElements.push(tdElements[i])
+//       }
+//       else if (tdElements[i].id === "may") {
+//         mayTdElements.push(tdElements[i])
+//       }
+//       else if (tdElements[i].id === "jun") {
+//         junTdElements.push(tdElements[i])
+//       }
+//       else if (tdElements[i].id === "jul") {
+//         julTdElements.push(tdElements[i])
+//       }
+//       else if (tdElements[i].id === "ago") {
+//         agoTdElements.push(tdElements[i])
+//       }
+//       else if (tdElements[i].id === "sep") {
+//         sepTdElements.push(tdElements[i])
+//       }
+//       else if (tdElements[i].id === "oct") {
+//         octTdElements.push(tdElements[i])
+//       }
+//       else if (tdElements[i].id === "nov") {
+//         novTdElements.push(tdElements[i])
+//       }
+//       else if (tdElements[i].id === "dic") {
+//         dicTdElements.push(tdElements[i])
+//       }
+//     }
+//     for (let i = 0; i <= 11; i++) {
+//       if (i == 0) {
+//         for (let k = 0; k < eneThElements.length; k++) {
+//           eneThElements[k].style.display = "table-cell";
+//           febThElements[k].style.display = "none";
+//           marThElements[k].style.display = "none";
+//           abrThElements[k].style.display = "none";
+//           mayThElements[k].style.display = "none";
+//           junThElements[k].style.display = "none";
+//           julThElements[k].style.display = "none";
+//           agoThElements[k].style.display = "none";
+//           sepThElements[k].style.display = "none";
+//           octThElements[k].style.display = "none";
+//           novThElements[k].style.display = "none";
+//           dicThElements[k].style.display = "none";
+//         }
+//         for (let k = 0; k < eneTdElements.length; k++) {
+//           eneTdElements[k].style.display = "table-cell";
+//           febTdElements[k].style.display = "none";
+//           marTdElements[k].style.display = "none";
+//           abrTdElements[k].style.display = "none";
+//           mayTdElements[k].style.display = "none";
+//           junTdElements[k].style.display = "none";
+//           julTdElements[k].style.display = "none";
+//           agoTdElements[k].style.display = "none";
+//           sepTdElements[k].style.display = "none";
+//           octTdElements[k].style.display = "none";
+//           novTdElements[k].style.display = "none";
+//           dicTdElements[k].style.display = "none";
+//         }
+//         if (i == actualMonth) {
+//           console.log(actualMonth)
+//           break
+//         }
+//       }
+//       if (i == 1) {
+//         for (let k = 0; k < eneThElements.length; k++) {
+//           eneThElements[k].style.display = "table-cell";
+//           febThElements[k].style.display = "table-cell";
+//           marThElements[k].style.display = "none";
+//           abrThElements[k].style.display = "none";
+//           mayThElements[k].style.display = "none";
+//           junThElements[k].style.display = "none";
+//           julThElements[k].style.display = "none";
+//           agoThElements[k].style.display = "none";
+//           sepThElements[k].style.display = "none";
+//           octThElements[k].style.display = "none";
+//           novThElements[k].style.display = "none";
+//           dicThElements[k].style.display = "none";
+//         }
+//         for (let k = 0; k < eneTdElements.length; k++) {
+//           eneTdElements[k].style.display = "table-cell";
+//           febTdElements[k].style.display = "table-cell";
+//           marTdElements[k].style.display = "none";
+//           abrTdElements[k].style.display = "none";
+//           mayTdElements[k].style.display = "none";
+//           junTdElements[k].style.display = "none";
+//           julTdElements[k].style.display = "none";
+//           agoTdElements[k].style.display = "none";
+//           sepTdElements[k].style.display = "none";
+//           octTdElements[k].style.display = "none";
+//           novTdElements[k].style.display = "none";
+//           dicTdElements[k].style.display = "none";
+//         }
+//         if (i == actualMonth) {
+//           console.log(actualMonth)
+//           break
+//         }
+//       }
+//       if (i == 2) {
+//         for (let k = 0; k < eneThElements.length; k++) {
+//           eneThElements[k].style.display = "table-cell";
+//           febThElements[k].style.display = "table-cell";
+//           marThElements[k].style.display = "table-cell";
+//           abrThElements[k].style.display = "none";
+//           mayThElements[k].style.display = "none";
+//           junThElements[k].style.display = "none";
+//           julThElements[k].style.display = "none";
+//           agoThElements[k].style.display = "none";
+//           sepThElements[k].style.display = "none";
+//           octThElements[k].style.display = "none";
+//           novThElements[k].style.display = "none";
+//           dicThElements[k].style.display = "none";
+//         }
+//         for (let k = 0; k < eneTdElements.length; k++) {
+//           eneTdElements[k].style.display = "table-cell";
+//           febTdElements[k].style.display = "table-cell";
+//           marTdElements[k].style.display = "table-cell";
+//           abrTdElements[k].style.display = "none";
+//           mayTdElements[k].style.display = "none";
+//           junTdElements[k].style.display = "none";
+//           julTdElements[k].style.display = "none";
+//           agoTdElements[k].style.display = "none";
+//           sepTdElements[k].style.display = "none";
+//           octTdElements[k].style.display = "none";
+//           novTdElements[k].style.display = "none";
+//           dicTdElements[k].style.display = "none";
+//         }
+//         if (i == actualMonth) {
+//           console.log(actualMonth)
+//           break
+//         }
+//       }
+//       if (i == 3) {
+//         for (let k = 0; k < eneThElements.length; k++) {
+//           eneThElements[k].style.display = "table-cell";
+//           febThElements[k].style.display = "table-cell";
+//           marThElements[k].style.display = "table-cell";
+//           abrThElements[k].style.display = "table-cell";
+//           mayThElements[k].style.display = "none";
+//           junThElements[k].style.display = "none";
+//           julThElements[k].style.display = "none";
+//           agoThElements[k].style.display = "none";
+//           sepThElements[k].style.display = "none";
+//           octThElements[k].style.display = "none";
+//           novThElements[k].style.display = "none";
+//           dicThElements[k].style.display = "none";
+//         }
+//         for (let k = 0; k < eneTdElements.length; k++) {
+//           eneTdElements[k].style.display = "table-cell";
+//           febTdElements[k].style.display = "table-cell";
+//           marTdElements[k].style.display = "table-cell";
+//           abrTdElements[k].style.display = "table-cell";
+//           mayTdElements[k].style.display = "none";
+//           junTdElements[k].style.display = "none";
+//           julTdElements[k].style.display = "none";
+//           agoTdElements[k].style.display = "none";
+//           sepTdElements[k].style.display = "none";
+//           octTdElements[k].style.display = "none";
+//           novTdElements[k].style.display = "none";
+//           dicTdElements[k].style.display = "none";
+//         }
+//         if (i == actualMonth) {
+//           break
+//         }
+//       }
+//       if (i == 4) {
+//         for (let k = 0; k < eneThElements.length; k++) {
+//           eneThElements[k].style.display = "table-cell";
+//           febThElements[k].style.display = "table-cell";
+//           marThElements[k].style.display = "table-cell";
+//           abrThElements[k].style.display = "table-cell";
+//           mayThElements[k].style.display = "table-cell";
+//           junThElements[k].style.display = "none";
+//           julThElements[k].style.display = "none";
+//           agoThElements[k].style.display = "none";
+//           sepThElements[k].style.display = "none";
+//           octThElements[k].style.display = "none";
+//           novThElements[k].style.display = "none";
+//           dicThElements[k].style.display = "none";
+//         }
+//         for (let k = 0; k < eneTdElements.length; k++) {
+//           eneTdElements[k].style.display = "table-cell";
+//           febTdElements[k].style.display = "table-cell";
+//           marTdElements[k].style.display = "table-cell";
+//           abrTdElements[k].style.display = "table-cell";
+//           mayTdElements[k].style.display = "table-cell";
+//           junTdElements[k].style.display = "none";
+//           julTdElements[k].style.display = "none";
+//           agoTdElements[k].style.display = "none";
+//           sepTdElements[k].style.display = "none";
+//           octTdElements[k].style.display = "none";
+//           novTdElements[k].style.display = "none";
+//           dicTdElements[k].style.display = "none";
+//         }
+//         if (i == actualMonth) {
+//           console.log(actualMonth)
+//           break
+//         }
+//       }
+//       if (i == 5) {
+//         for (let k = 0; k < eneThElements.length; k++) {
+//           eneThElements[k].style.display = "table-cell";
+//           febThElements[k].style.display = "table-cell";
+//           marThElements[k].style.display = "table-cell";
+//           abrThElements[k].style.display = "table-cell";
+//           mayThElements[k].style.display = "table-cell";
+//           junThElements[k].style.display = "table-cell";
+//           julThElements[k].style.display = "none";
+//           agoThElements[k].style.display = "none";
+//           sepThElements[k].style.display = "none";
+//           octThElements[k].style.display = "none";
+//           novThElements[k].style.display = "none";
+//           dicThElements[k].style.display = "none";
+//         }
+//         for (let k = 0; k < eneTdElements.length; k++) {
+//           eneTdElements[k].style.display = "table-cell";
+//           febTdElements[k].style.display = "table-cell";
+//           marTdElements[k].style.display = "table-cell";
+//           abrTdElements[k].style.display = "table-cell";
+//           mayTdElements[k].style.display = "table-cell";
+//           junTdElements[k].style.display = "table-cell";
+//           julTdElements[k].style.display = "none";
+//           agoTdElements[k].style.display = "none";
+//           sepTdElements[k].style.display = "none";
+//           octTdElements[k].style.display = "none";
+//           novTdElements[k].style.display = "none";
+//           dicTdElements[k].style.display = "none";
+//         }
+//         if (i == actualMonth) {
+//           console.log(actualMonth)
+//           break
+//         }
+//       }
+//       if (i == 6) {
+//         for (let k = 0; k < eneThElements.length; k++) {
+//           eneThElements[k].style.display = "table-cell";
+//           febThElements[k].style.display = "table-cell";
+//           marThElements[k].style.display = "table-cell";
+//           abrThElements[k].style.display = "table-cell";
+//           mayThElements[k].style.display = "table-cell";
+//           junThElements[k].style.display = "table-cell";
+//           julThElements[k].style.display = "table-cell";
+//           agoThElements[k].style.display = "none";
+//           sepThElements[k].style.display = "none";
+//           octThElements[k].style.display = "none";
+//           novThElements[k].style.display = "none";
+//           dicThElements[k].style.display = "none";
+//         }
+//         for (let k = 0; k < eneTdElements.length; k++) {
+//           eneTdElements[k].style.display = "table-cell";
+//           febTdElements[k].style.display = "table-cell";
+//           marTdElements[k].style.display = "table-cell";
+//           abrTdElements[k].style.display = "table-cell";
+//           mayTdElements[k].style.display = "table-cell";
+//           junTdElements[k].style.display = "table-cell";
+//           julTdElements[k].style.display = "table-cell";
+//           agoTdElements[k].style.display = "none";
+//           sepTdElements[k].style.display = "none";
+//           octTdElements[k].style.display = "none";
+//           novTdElements[k].style.display = "none";
+//           dicTdElements[k].style.display = "none";
+//         }
+//         if (i == actualMonth) {
+//           console.log(actualMonth)
+//           break
+//         }
+//       }
+//       if (i == 7) {
+//         for (let k = 0; k < eneThElements.length; k++) {
+//           eneThElements[k].style.display = "table-cell";
+//           febThElements[k].style.display = "table-cell";
+//           marThElements[k].style.display = "table-cell";
+//           abrThElements[k].style.display = "table-cell";
+//           mayThElements[k].style.display = "table-cell";
+//           junThElements[k].style.display = "table-cell";
+//           julThElements[k].style.display = "table-cell";
+//           agoThElements[k].style.display = "table-cell";
+//           sepThElements[k].style.display = "none";
+//           octThElements[k].style.display = "none";
+//           novThElements[k].style.display = "none";
+//           dicThElements[k].style.display = "none";
+//         }
+//         for (let k = 0; k < eneTdElements.length; k++) {
+//           eneTdElements[k].style.display = "table-cell";
+//           febTdElements[k].style.display = "table-cell";
+//           marTdElements[k].style.display = "table-cell";
+//           abrTdElements[k].style.display = "table-cell";
+//           mayTdElements[k].style.display = "table-cell";
+//           junTdElements[k].style.display = "table-cell";
+//           julTdElements[k].style.display = "table-cell";
+//           agoTdElements[k].style.display = "table-cell";
+//           sepTdElements[k].style.display = "none";
+//           octTdElements[k].style.display = "none";
+//           novTdElements[k].style.display = "none";
+//           dicTdElements[k].style.display = "none";
+//         }
+//         if (i == actualMonth) {
+//           console.log(actualMonth)
+//           break
+//         }
+//       }
+//       if (i == 8) {
+//         for (let k = 0; k < eneThElements.length; k++) {
+//           eneThElements[k].style.display = "table-cell";
+//           febThElements[k].style.display = "table-cell";
+//           marThElements[k].style.display = "table-cell";
+//           abrThElements[k].style.display = "table-cell";
+//           mayThElements[k].style.display = "table-cell";
+//           junThElements[k].style.display = "table-cell";
+//           julThElements[k].style.display = "table-cell";
+//           agoThElements[k].style.display = "table-cell";
+//           sepThElements[k].style.display = "table-cell";
+//           octThElements[k].style.display = "none";
+//           novThElements[k].style.display = "none";
+//           dicThElements[k].style.display = "none";
+//         }
+//         for (let k = 0; k < eneTdElements.length; k++) {
+//           eneTdElements[k].style.display = "table-cell";
+//           febTdElements[k].style.display = "table-cell";
+//           marTdElements[k].style.display = "table-cell";
+//           abrTdElements[k].style.display = "table-cell";
+//           mayTdElements[k].style.display = "table-cell";
+//           junTdElements[k].style.display = "table-cell";
+//           julTdElements[k].style.display = "table-cell";
+//           agoTdElements[k].style.display = "table-cell";
+//           sepTdElements[k].style.display = "table-cell";
+//           octTdElements[k].style.display = "none";
+//           novTdElements[k].style.display = "none";
+//           dicTdElements[k].style.display = "none";
+//         }
+//         if (i == actualMonth) {
+//           console.log(actualMonth)
+//           break
+//         }
+//       }
+//       if (i == 9) {
+//         for (let k = 0; k < eneThElements.length; k++) {
+//           eneThElements[k].style.display = "table-cell";
+//           febThElements[k].style.display = "table-cell";
+//           marThElements[k].style.display = "table-cell";
+//           abrThElements[k].style.display = "table-cell";
+//           mayThElements[k].style.display = "table-cell";
+//           junThElements[k].style.display = "table-cell";
+//           julThElements[k].style.display = "table-cell";
+//           agoThElements[k].style.display = "table-cell";
+//           sepThElements[k].style.display = "table-cell";
+//           octThElements[k].style.display = "table-cell";
+//           novThElements[k].style.display = "none";
+//           dicThElements[k].style.display = "none";
+//         }
+//         for (let k = 0; k < eneTdElements.length; k++) {
+//           eneTdElements[k].style.display = "table-cell";
+//           febTdElements[k].style.display = "table-cell";
+//           marTdElements[k].style.display = "table-cell";
+//           abrTdElements[k].style.display = "table-cell";
+//           mayTdElements[k].style.display = "table-cell";
+//           junTdElements[k].style.display = "table-cell";
+//           julTdElements[k].style.display = "table-cell";
+//           agoTdElements[k].style.display = "table-cell";
+//           sepTdElements[k].style.display = "table-cell";
+//           octTdElements[k].style.display = "table-cell";
+//           novTdElements[k].style.display = "none";
+//           dicTdElements[k].style.display = "none";
+//         }
+//         if (i == actualMonth) {
+//           console.log(actualMonth)
+//           break
+//         }
+//       }
+//       if (i == 10) {
+//         for (let k = 0; k < eneThElements.length; k++) {
+//           eneThElements[k].style.display = "table-cell";
+//           febThElements[k].style.display = "table-cell";
+//           marThElements[k].style.display = "table-cell";
+//           abrThElements[k].style.display = "table-cell";
+//           mayThElements[k].style.display = "table-cell";
+//           junThElements[k].style.display = "table-cell";
+//           julThElements[k].style.display = "table-cell";
+//           agoThElements[k].style.display = "table-cell";
+//           sepThElements[k].style.display = "table-cell";
+//           octThElements[k].style.display = "table-cell";
+//           novThElements[k].style.display = "table-cell";
+//           dicThElements[k].style.display = "none";
+//         }
+//         for (let k = 0; k < eneTdElements.length; k++) {
+//           eneTdElements[k].style.display = "table-cell";
+//           febTdElements[k].style.display = "table-cell";
+//           marTdElements[k].style.display = "table-cell";
+//           abrTdElements[k].style.display = "table-cell";
+//           mayTdElements[k].style.display = "table-cell";
+//           junTdElements[k].style.display = "table-cell";
+//           julTdElements[k].style.display = "table-cell";
+//           agoTdElements[k].style.display = "table-cell";
+//           sepTdElements[k].style.display = "table-cell";
+//           octTdElements[k].style.display = "table-cell";
+//           novTdElements[k].style.display = "table-cell";
+//           dicTdElements[k].style.display = "none";
+//         }
+//         if (i == actualMonth) {
+//           console.log(actualMonth)
+//           break
+//         }
+//       }
+//       if (i == 11) {
+//         for (let k = 0; k < eneThElements.length; k++) {
+//           eneThElements[k].style.display = "table-cell";
+//           febThElements[k].style.display = "table-cell";
+//           marThElements[k].style.display = "table-cell";
+//           abrThElements[k].style.display = "table-cell";
+//           mayThElements[k].style.display = "table-cell";
+//           junThElements[k].style.display = "table-cell";
+//           julThElements[k].style.display = "table-cell";
+//           agoThElements[k].style.display = "table-cell";
+//           sepThElements[k].style.display = "table-cell";
+//           octThElements[k].style.display = "table-cell";
+//           novThElements[k].style.display = "table-cell";
+//           dicThElements[k].style.display = "table-cell";
+//         }
+//         for (let k = 0; k < eneTdElements.length; k++) {
+//           eneTdElements[k].style.display = "table-cell";
+//           febTdElements[k].style.display = "table-cell";
+//           marTdElements[k].style.display = "table-cell";
+//           abrTdElements[k].style.display = "table-cell";
+//           mayTdElements[k].style.display = "table-cell";
+//           junTdElements[k].style.display = "table-cell";
+//           julTdElements[k].style.display = "table-cell";
+//           agoTdElements[k].style.display = "table-cell";
+//           sepTdElements[k].style.display = "table-cell";
+//           octTdElements[k].style.display = "table-cell";
+//           novTdElements[k].style.display = "table-cell";
+//           dicTdElements[k].style.display = "table-cell";
+//         }
+//         if (i == actualMonth) {
+//           console.log(actualMonth)
+//           break
+//         }
+//       }
+//     }
+//   }
+// }
 function getValues() {
   var data = [];
   var ele = document.getElementsByTagName("input");
@@ -999,8 +999,8 @@ function getValues() {
   }
   data.push(companyName, staffName, email, phone)
   console.log(data)
-  if(data.length == 73){
-    if(data[70] == "")
+  if(data.length == 69){
+    if(data[66] == "")
     {
       Swal.fire({
         icon: "info",
@@ -1008,7 +1008,7 @@ function getValues() {
         confirmButtonColor: "#3085d6"
       })
     }
-    else if(data[70] != "")
+    else if(data[66] != "")
     {
       Swal.fire({
         position: "center",
@@ -1096,14 +1096,10 @@ function sendData(array) {
       q17feb: `${array[62]}`,
       q17mar: `${array[63]}`,
       q17abr: `${array[64]}`,
-      q18ene: `${array[65]}`,
-      q18feb: `${array[66]}`,
-      q18mar: `${array[67]}`,
-      q18abr: `${array[68]}`,
-      name: `${array[69]}`,
-      company: `${array[70]}`,
-      email: `${array[71]}`,
-      phone: `${array[72]}`,
+      name: `${array[65]}`,
+      company: `${array[66]}`,
+      email: `${array[67]}`,
+      phone: `${array[68]}`
     });
     // sheet.best
     var config = {
@@ -1172,39 +1168,39 @@ function escribirCiudad(inputObject) {
         escribirCiudad(inputObject)
       }
       else if(ciudad != ""){
-        if (inputObject.id == "otroseneq12") {
-          document.getElementById("insertCityeneq12").innerHTML = "";
-          document.getElementById("otroseneq12").value = ciudad;
+        if (inputObject.id == "otroseneq11") {
+          document.getElementById("insertCityeneq11").innerHTML = "";
+          document.getElementById("otroseneq11").value = ciudad;
           document.getElementById(
-            "insertCityeneq12"
+            "insertCityeneq11"
           ).innerHTML += `<h6><mark>${ciudad}</mark></h6>`;
         }
-        else if (inputObject.id == "otrosfebq12") {
-          document.getElementById("insertCityfebq12").innerHTML = "";
-          document.getElementById("otrosfebq12").value = ciudad;
+        else if (inputObject.id == "otrosfebq11") {
+          document.getElementById("insertCityfebq11").innerHTML = "";
+          document.getElementById("otrosfebq11").value = ciudad;
           document.getElementById(
-            "insertCityfebq12"
+            "insertCityfebq11"
           ).innerHTML += `<h6><mark>${ciudad}</mark></h6>`;
         }
-        else if (inputObject.id == "otrosmarq12") {
-          document.getElementById("insertCitymarq12").innerHTML = "";
-          document.getElementById("otrosmarq12").value = ciudad;
+        else if (inputObject.id == "otrosmarq11") {
+          document.getElementById("insertCitymarq11").innerHTML = "";
+          document.getElementById("otrosmarq11").value = ciudad;
           document.getElementById(
-            "insertCitymarq12"
+            "insertCitymarq11"
           ).innerHTML += `<h6><mark>${ciudad}</mark></h6>`;
         }
-        else if (inputObject.id == "otrosabrq12") {
-          document.getElementById("insertCityabrq12").innerHTML = "";
-          document.getElementById("otrosabrq12").value = ciudad;
+        else if (inputObject.id == "otrosabrq11") {
+          document.getElementById("insertCityabrq11").innerHTML = "";
+          document.getElementById("otrosabrq11").value = ciudad;
           document.getElementById(
-            "insertCityabrq12"
+            "insertCityabrq11"
           ).innerHTML += `<h6><mark>${ciudad}</mark></h6>`;
         }
-        else if (inputObject.id == "otrosmayq12") {
-          document.getElementById("insertCitymayq12").innerHTML = "";
-          document.getElementById("otrosmayq12").value = ciudad;
+        else if (inputObject.id == "otrosmayq11") {
+          document.getElementById("insertCitymayq11").innerHTML = "";
+          document.getElementById("otrosmayq11").value = ciudad;
           document.getElementById(
-            "insertCitymayq12"
+            "insertCitymayq11"
           ).innerHTML += `<h6><mark>${ciudad}</mark></h6>`;
         }
       }   
@@ -1221,39 +1217,39 @@ function escribirUso(inputObject) {
         escribirUso(inputObject)
       }
       else if(uso != ""){
-        if(inputObject.id == "otroseneq16"){
-          document.getElementById("insertUseeneq16").innerHTML = "";
-          document.getElementById("otroseneq16").value = uso;
+        if(inputObject.id == "otroseneq15"){
+          document.getElementById("insertUseeneq15").innerHTML = "";
+          document.getElementById("otroseneq15").value = uso;
           document.getElementById(
-            "insertUseeneq16"
+            "insertUseeneq15"
           ).innerHTML += `<h6><mark>${uso}</mark></h6>`;
         }
-        if(inputObject.id == "otrosfebq16"){
-          document.getElementById("insertUsefebq16").innerHTML = "";
-          document.getElementById("otrosfebq16").value = uso;
+        if(inputObject.id == "otrosfebq15"){
+          document.getElementById("insertUsefebq15").innerHTML = "";
+          document.getElementById("otrosfebq15").value = uso;
           document.getElementById(
-            "insertUsefebq16"
+            "insertUsefebq15"
           ).innerHTML += `<h6><mark>${uso}</mark></h6>`;
         }
-        if(inputObject.id == "otrosmarq16"){
-          document.getElementById("insertUsemarq16").innerHTML = "";
-          document.getElementById("otrosmarq16").value = uso;
+        if(inputObject.id == "otrosmarq15"){
+          document.getElementById("insertUsemarq15").innerHTML = "";
+          document.getElementById("otrosmarq15").value = uso;
           document.getElementById(
-            "insertUsemarq16"
+            "insertUsemarq15"
           ).innerHTML += `<h6><mark>${uso}</mark></h6>`;
         }
-        if(inputObject.id == "otrosabrq16"){
-          document.getElementById("insertUseabrq16").innerHTML = "";
-          document.getElementById("otrosabrq16").value = uso;
+        if(inputObject.id == "otrosabrq15"){
+          document.getElementById("insertUseabrq15").innerHTML = "";
+          document.getElementById("otrosabrq15").value = uso;
           document.getElementById(
-            "insertUseabrq16"
+            "insertUseabrq15"
           ).innerHTML += `<h6><mark>${uso}</mark></h6>`;
         }
-        if(inputObject.id == "otrosmayq16"){
-          document.getElementById("insertUsemayq16").innerHTML = "";
-          document.getElementById("otrosmayq16").value = uso;
+        if(inputObject.id == "otrosmayq15"){
+          document.getElementById("insertUsemayq15").innerHTML = "";
+          document.getElementById("otrosmayq15").value = uso;
           document.getElementById(
-            "insertUsemayq16"
+            "insertUsemayq15"
           ).innerHTML += `<h6><mark>${uso}</mark></h6>`;
         }
       }
